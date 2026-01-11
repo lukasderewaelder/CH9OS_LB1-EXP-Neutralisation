@@ -323,7 +323,7 @@
         
         // --- KONZENTRATION ---
         // 3.0 Molar für starke Reaktion
-        const CONC = 3.0; 
+        const CONC = 1.0; 
         
         // Physics constants
         const BASE_TEMP = 20.0;
@@ -422,7 +422,7 @@
 
             // --- 3. Temperature Calculation ---
             const molesReacted = Math.min(molesH, molesOH);
-            const energyReleasedJ = molesReacted * HEAT_OF_NEUTRALIZATION; 
+            const energyReleasedJ = molesReacted * HEAT_OF_NEUTRALIZATION * 3.5; 
             const totalMassG = totalVol; 
             
             const tempRise = energyReleasedJ / (totalMassG * SPECIFIC_HEAT);
@@ -579,4 +579,5 @@
         requestAnimationFrame(animateTemp);
     </script>
 </body>
+
 </html>
